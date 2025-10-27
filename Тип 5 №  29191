@@ -1,0 +1,7 @@
+for N in range(2,500):
+    b=bin(N)[2:]
+    b+=b[1] + b[0]
+    R=int(b,2)
+    if R>74:
+        print(N)
+        break
