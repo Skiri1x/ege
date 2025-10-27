@@ -1,0 +1,8 @@
+for N in range(500,1,-1):
+    b=bin(N)[2:]
+    b=b[::-1]
+    R=int(b,2)
+    
+    if N<=100 and R==13:
+        print(N)
+        break
