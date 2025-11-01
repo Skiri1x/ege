@@ -1,0 +1,16 @@
+from sys import *
+setrecursionlimit(100000)
+
+def f(n):
+    if n%2==0:
+        return f(n/2)+3
+    if n%2!=0 and n%3==0:
+        return f(n/3)+2
+    if n%2!=0 and n%3!=0:
+        return 0
+
+
+for n in range(1,1000000000000):
+    if f(n) == 67:
+        print(n)
+        
