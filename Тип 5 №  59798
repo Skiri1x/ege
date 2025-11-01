@@ -1,0 +1,16 @@
+def SS(N,b):
+    s=''
+    while N>0:
+        s+=str(N%b)
+        N//=b 
+    return s[::-1]
+    
+for N in range(1,500):
+    j=SS(N,3)
+    if N%3!=0:
+        j+=SS((N%3)*5,3)
+        
+    R=int(j,3)
+    if R>146:
+        print(N)
+        break
