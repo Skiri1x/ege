@@ -1,0 +1,18 @@
+def SS(N,b):
+    s=''
+    while N>0:
+        s+=str(N%b)
+        N//=b 
+    return s[::-1]
+    
+for N in range(1000,1,-1):
+    j=SS(N,3)
+    if N%3==0:
+        j+=j[-2]+j[-1]
+    if N%3!=0:
+        j+=SS((N%3)*5,3)
+        
+    R=int(j,3)
+    if R<173:
+        print(R)
+        break
